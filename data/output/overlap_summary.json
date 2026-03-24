@@ -1,0 +1,69 @@
+{
+  "n_reviews": 501,
+  "n_unique_studies": 10006,
+  "n_multi_review": 444,
+  "pct_multi_review": 4.4,
+  "max_reviews_per_study": 7,
+  "cca": 0.0001,
+  "cca_class": "Slight",
+  "n_pairs_with_overlap": 604,
+  "total_possible_pairs": 125250,
+  "overlap_distribution": {
+    "1_review": 9562,
+    "2_reviews": 362,
+    "3_reviews": 55,
+    "4plus": 27
+  },
+  "top_5_overlapping_pairs": [
+    {
+      "review_1": "CD011381",
+      "review_2": "CD012186",
+      "n_shared": 43,
+      "n_r1": 50,
+      "n_r2": 109,
+      "jaccard": 0.3707,
+      "pct_r1": 86.0,
+      "pct_r2": 39.4
+    },
+    {
+      "review_1": "CD012186",
+      "review_2": "CD015443",
+      "n_shared": 17,
+      "n_r1": 109,
+      "n_r2": 22,
+      "jaccard": 0.1491,
+      "pct_r1": 15.6,
+      "pct_r2": 77.3
+    },
+    {
+      "review_1": "CD013232",
+      "review_2": "CD014965",
+      "n_shared": 12,
+      "n_r1": 128,
+      "n_r2": 17,
+      "jaccard": 0.0902,
+      "pct_r1": 9.4,
+      "pct_r2": 70.6
+    },
+    {
+      "review_1": "CD001920",
+      "review_2": "CD016002",
+      "n_shared": 9,
+      "n_r1": 196,
+      "n_r2": 30,
+      "jaccard": 0.0415,
+      "pct_r1": 4.6,
+      "pct_r2": 30.0
+    },
+    {
+      "review_1": "CD006919",
+      "review_2": "CD012586",
+      "n_shared": 8,
+      "n_r1": 40,
+      "n_r2": 169,
+      "jaccard": 0.0398,
+      "pct_r1": 20.0,
+      "pct_r2": 4.7
+    }
+  ]
+}
