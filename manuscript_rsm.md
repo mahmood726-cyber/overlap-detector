@@ -69,7 +69,7 @@ We tabulated the number of reviews in which each unique study appeared (frequenc
 
 ### 2.6 Software
 
-All analyses were conducted in Python 3.11 using pandas, numpy, and pyreadr for reading R data files. Figures were generated with matplotlib. The complete analysis pipeline and data are available at [REPOSITORY_URL_PLACEHOLDER].
+All analyses were conducted in Python 3.11 using pandas, numpy, and pyreadr for reading R data files. Figures were generated with matplotlib. The complete analysis pipeline and data are available at https://github.com/mahmood726-cyber/overlap-detector.
 
 ## 3. Results
 
@@ -127,7 +127,7 @@ Study overlap across 501 Cochrane systematic reviews in the Pairwise70 dataset i
 
 ## Data Availability
 
-The Pairwise70 dataset is available at [PAIRWISE70_DOI_PLACEHOLDER]. The analysis code and output data are available at [REPOSITORY_URL_PLACEHOLDER].
+The Pairwise70 dataset is available at [PAIRWISE70_DOI_PLACEHOLDER]. The analysis code and output data are available at https://github.com/mahmood726-cyber/overlap-detector.
 
 ## Funding
 
