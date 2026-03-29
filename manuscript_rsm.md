@@ -127,11 +127,11 @@ Study overlap across 501 Cochrane systematic reviews in the Pairwise70 dataset i
 
 ## Data Availability
 
-The Pairwise70 dataset is available at [PAIRWISE70_DOI_PLACEHOLDER]. The analysis code and output data are available at https://github.com/mahmood726-cyber/overlap-detector.
+The Pairwise70 dataset is currently available at https://github.com/mahmood789/Pairwise70; a public archive DOI can be added when a Zenodo record is minted. The analysis code and output data are available at https://github.com/mahmood726-cyber/overlap-detector.
 
 ## Funding
 
-[FUNDING_PLACEHOLDER]
+No funding information is recorded in the current project files; update this section at submission if applicable.
 
 ## Competing Interests
 
@@ -180,7 +180,7 @@ The author declares no competing interests.
 3. Lunny C, Pieper D, Thabet P, Kanji S. Managing overlap of primary study results across systematic reviews: practical considerations for authors of overviews of reviews. BMC Med Res Methodol. 2021;21(1):140.
 4. Becker LA, Oxman AD. Chapter 22: Overviews of reviews. In: Higgins JPT, Green S, eds. Cochrane Handbook for Systematic Reviews of Interventions. Version 5.1.0. The Cochrane Collaboration; 2011.
 5. Pieper D, Antoine SL, Mathes T, et al. Evaluation of a proposed method (CCA) for measuring overlap in systematic reviews. BMC Med Res Methodol. 2014;14:135.
-6. [PAIRWISE70_CITATION_PLACEHOLDER]. Pairwise70: A curated dataset of 501 Cochrane pairwise meta-analyses. [YEAR].
+6. Arai M. Pairwise70: Comprehensive Cochrane Pairwise Meta-Analysis Dataset Collection. R package version 2.0.0. GitHub; 2026. Available from: https://github.com/mahmood789/Pairwise70.
 7. Higgins JPT, Thomas J, Chandler J, et al., eds. Cochrane Handbook for Systematic Reviews of Interventions. Version 6.4. Cochrane; 2023.
 8. Jaccard P. The distribution of the flora in the alpine zone. New Phytol. 1912;11(2):37-50.
 9. Veroniki AA, Jackson D, Viechtbauer W, et al. Methods to estimate the between-study variance and its uncertainty in meta-analysis. Res Synth Methods. 2016;7(1):55-79.

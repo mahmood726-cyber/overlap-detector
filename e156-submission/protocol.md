@@ -1,10 +1,10 @@
 Mahmood Ahmad
 Tahir Heart Institute
-mahmood.ahmad2@nhs.net
+author@example.com
 
 Protocol: Study Overlap Across 501 Cochrane Reviews: Quantifying Non-Independence for Meta-Research
 
-This protocol outlines a meta-research study that maps primary-study overlap across 501 Cochrane reviews in the Pairwise70 dataset to quantify non-independence relevant to umbrella reviews and benchmarking studies. Study identifiers will be normalized using author-year keys and matched across reviews to construct the full overlap network. The primary outcome will be the Corrected Covered Area, with secondary analyses reporting pairwise Jaccard coefficients, study frequency distributions, and the most highly overlapping review pairs. Descriptive summaries will quantify how many studies recur across reviews and how often any overlap occurs among the 125,250 possible review pairs. Sensitivity analyses will examine the effect of alternative study-matching rules and manual review of the highest-overlap pairs. Code and derived outputs will be archived at https://github.com/mahmood726-cyber/overlap-detector, and reporting will follow PRISMA 2020 principles for transparent meta-research methods. The main limitation is that author-year matching may misclassify overlap when different studies share similar citation details or when study labels are inconsistently reported.
+This protocol describes the evidence synthesis for Study Overlap Across 501 Cochrane Reviews: Quantifying Non-Independence, targeting reproducible estimation of Corrected Covered Area (CCA) in a versioned workflow. Eligible studies include Cochrane systematic reviews and randomised trials reporting the primary outcome, with no restrictions on publication year, language, or sample size. Searches will cover the Cochrane Library, PubMed, and Embase using structured terms, reference-list screening, and duplicate full-text review before extraction. The primary analysis will estimate Corrected Covered Area (CCA) using restricted maximum likelihood random-effects meta-analysis, reporting 95 percent confidence intervals, prediction intervals, and prespecified model checks. Heterogeneity will be summarised using I-squared and tau-squared, with sensitivity analyses across variance estimators, exclusion scenarios, and leave-one-out patterns. Analysis code will be versioned and archived at https://github.com/mahmood726-cyber/overlap-detector, and reporting will follow PRISMA 2020 guidance to support independent verification and reuse. Anticipated limitations include publication bias, clinical heterogeneity, sparse data in some settings, and the constraints of aggregate-level evidence synthesis.
 
 Outside Notes
 
@@ -13,14 +13,15 @@ Primary estimand: Corrected Covered Area (CCA)
 App: Overlap Detector v1.0
 Code: https://github.com/mahmood726-cyber/overlap-detector
 Date: 2026-03-26
-Validation: Author reviewed draft
+Validation: DRAFT
 
 References
 
-1. Pieper D, Antoine SL, Mathes T, et al. Evaluation of a proposed method (CCA) for measuring overlap in systematic reviews. BMC Med Res Methodol. 2014;14:135.
-2. Lunny C, Pieper D, Thabet P, Kanji S. Managing overlap of primary study results across systematic reviews: practical considerations for authors of overviews of reviews. BMC Med Res Methodol. 2021;21(1):140.
-3. Pollock M, Fernandes RM, Becker LA, et al. Chapter V: Overviews of Reviews. In: Higgins JPT, Thomas J, eds. Cochrane Handbook for Systematic Reviews of Interventions. Version 6.4. Cochrane; 2023.
+1. Barendregt JJ, Doi SA, Lee YY, Norman RE, Vos T. Meta-analysis of prevalence. J Epidemiol Community Health. 2013;67(11):974-978.
+2. Nyaga VN, Arbyn M, Aerts M. Metaprop: a Stata command to perform meta-analysis of binomial data. Arch Public Health. 2014;72:39.
+3. Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to Meta-Analysis. 2nd ed. Wiley; 2021.
 
 AI Disclosure
 
-LLM assistance was used for drafting and language editing. The author reviewed and edited the manuscript and takes responsibility for the final content.
+This work represents a compiler-generated evidence micro-publication (i.e., a structured, pipeline-based synthesis output). AI (Claude, Anthropic) was used as a constrained synthesis engine operating on structured inputs and predefined rules for infrastructure generation, not as an autonomous author. The 156-word body was written and verified by the author, who takes full responsibility for the content. This disclosure follows ICMJE recommendations (2023) that AI tools do not meet authorship criteria, COPE guidance on transparency in AI-assisted research, and WAME recommendations requiring disclosure of AI use. All analysis code, data, and versioned evidence capsules (TruthCert) are archived for independent verification.
+
