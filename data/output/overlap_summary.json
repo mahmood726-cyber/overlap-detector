@@ -1,18 +1,18 @@
 {
-  "n_reviews": 501,
-  "n_unique_studies": 10006,
-  "n_multi_review": 444,
-  "pct_multi_review": 4.4,
-  "max_reviews_per_study": 7,
+  "n_reviews": 591,
+  "n_unique_studies": 11899,
+  "n_multi_review": 590,
+  "pct_multi_review": 5.0,
+  "max_reviews_per_study": 8,
   "cca": 0.0001,
   "cca_class": "Slight",
-  "n_pairs_with_overlap": 604,
-  "total_possible_pairs": 125250,
+  "n_pairs_with_overlap": 875,
+  "total_possible_pairs": 174345,
   "overlap_distribution": {
-    "1_review": 9562,
-    "2_reviews": 362,
-    "3_reviews": 55,
-    "4plus": 27
+    "1_review": 11309,
+    "2_reviews": 479,
+    "3_reviews": 68,
+    "4plus": 43
   },
   "top_5_overlapping_pairs": [
     {
@@ -56,14 +56,14 @@
       "pct_r2": 30.0
     },
     {
-      "review_1": "CD006919",
-      "review_2": "CD012586",
-      "n_shared": 8,
+      "review_1": "CD015022",
+      "review_2": "CD015192",
+      "n_shared": 9,
       "n_r1": 40,
-      "n_r2": 169,
-      "jaccard": 0.0398,
-      "pct_r1": 20.0,
-      "pct_r2": 4.7
+      "n_r2": 20,
+      "jaccard": 0.1765,
+      "pct_r1": 22.5,
+      "pct_r2": 45.0
     }
   ]
 }

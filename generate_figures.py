@@ -73,7 +73,7 @@ def load_pairs():
 
 def figure1_study_frequency(summary):
     """Bar chart: how many reviews each study appears in."""
-    dist = summary['overlap_distribution']
+    dist = summary['overlap_distribution'].copy()
     # Categories
     cats = ['1', '2', '3', '4+']
     vals = [dist['1_review'], dist['2_reviews'], dist['3_reviews'], dist['4plus']]
@@ -117,7 +117,7 @@ def figure1_study_frequency(summary):
 
 def figure2_overlap_network(pairs):
     """Network graph of top 20 most overlapping review pairs."""
-    top20 = pairs[:20]
+    top20 = pairs[:20].copy()
 
     # Collect unique nodes
     nodes = set()
@@ -143,8 +143,8 @@ def figure2_overlap_network(pairs):
     # Draw edges
     max_shared = max(p['n_shared'] for p in top20)
     for p in top20:
-        x1, y1 = pos[p['review_1']]
-        x2, y2 = pos[p['review_2']]
+        x1, y1 = pos[p['review_1']].copy()
+        x2, y2 = pos[p['review_2']].copy()
         lw = 0.5 + 4.5 * (p['n_shared'] / max_shared)
         alpha = 0.3 + 0.6 * (p['n_shared'] / max_shared)
         ax.plot([x1, x2], [y1, y2], color='#d7191c', linewidth=lw, alpha=alpha, zorder=1)
@@ -159,7 +159,7 @@ def figure2_overlap_network(pairs):
     # Draw nodes
     max_studies = max(node_studies.values()) if node_studies else 1
     for node in nodes:
-        x, y = pos[node]
+        x, y = pos[node].copy()
         ns = node_studies.get(node, 1)
         size = 200 + 800 * (ns / max_studies)
         ax.scatter(x, y, s=size, c='#2c7bb6', edgecolors='white', linewidth=1.5, zorder=2)
