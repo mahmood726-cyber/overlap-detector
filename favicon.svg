@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>OverlapDetector favicon</title>
+  <rect width="64" height="64" rx="14" fill="#FDFCFA"/>
+  <circle cx="26" cy="30" r="11" fill="none" stroke="#2E86C1" stroke-width="4"/>
+  <circle cx="38" cy="30" r="11" fill="none" stroke="#7A5A10" stroke-width="4"/>
+  <path d="M26 18v24M38 18v24" fill="none" stroke="#E5E0D6" stroke-width="2"/>
+  <text x="32" y="54" fill="#7A5A10" font-family="Georgia, serif" font-size="12" font-weight="700" text-anchor="middle">OD</text>
+</svg>
