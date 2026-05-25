@@ -84,11 +84,11 @@ The main limitation is that first-author-year matching may produce false positiv
 
 ## References
 
-1. Page MJ, Shamseer L, Altman DG, et al. Epidemiology and reporting characteristics of systematic reviews. *PLoS Med*. 2016;13(5):e1002028.
+1. Page MJ, Shamseer L, Altman DG, et al. Epidemiology and reporting characteristics of systematic reviews. *PLoS Med*. 2016;13(5):e1002028. doi:10.1371/journal.pmed.1002028
 2. Ioannidis JPA. Why most published research findings are false. *PLoS Med*. 2005;2(8):e124.
 3. Higgins JPT, Thompson SG. Quantifying heterogeneity in a meta-analysis. *Stat Med*. 2002;21(11):1539-1558.
-4. Shea BJ, Reeves BC, Wells G, et al. AMSTAR 2. *BMJ*. 2017;358:j4008.
-5. Pieper D, Antoine SL, Mathes T, et al. Systematic review finds overlapping reviews were not mentioned in every other overview. *J Clin Epidemiol*. 2014;67(4):368-375.
+4. Shea BJ, Reeves BC, Wells G, et al. AMSTAR 2. *BMJ*. 2017;358:j4008. doi:10.1136/bmj.j4008
+5. Pieper D, Antoine SL, Mathes T, et al. Systematic review finds overlapping reviews were not mentioned in every other overview. *J Clin Epidemiol*. 2014;67(4):368-375. doi:10.1016/j.jclinepi.2013.11.007
 
 ---
 

@@ -175,15 +175,15 @@ The author declares no competing interests.
 
 ## References
 
-1. Pieper D, Antoine SL, Mathes T, et al. Systematic review finds overlapping reviews were not mentioned in every other overview. J Clin Epidemiol. 2014;67(4):368-375.
+1. Pieper D, Antoine SL, Mathes T, et al. Systematic review finds overlapping reviews were not mentioned in every other overview. J Clin Epidemiol. 2014;67(4):368-375. doi:10.1016/j.jclinepi.2013.11.007
 2. Hennessy EA, Johnson BT, Keenan C. Best practice guidelines and essential methodological steps to conduct rigorous and systematic meta-reviews. Appl Psychol Health Well Being. 2019;11(3):353-381.
 3. Lunny C, Pieper D, Thabet P, Kanji S. Managing overlap of primary study results across systematic reviews: practical considerations for authors of overviews of reviews. BMC Med Res Methodol. 2021;21(1):140.
-4. Becker LA, Oxman AD. Chapter 22: Overviews of reviews. In: Higgins JPT, Green S, eds. Cochrane Handbook for Systematic Reviews of Interventions. Version 5.1.0. The Cochrane Collaboration; 2011.
-5. Pieper D, Antoine SL, Mathes T, et al. Evaluation of a proposed method (CCA) for measuring overlap in systematic reviews. BMC Med Res Methodol. 2014;14:135.
+4. Becker LA, Oxman AD. Chapter 22: Overviews of reviews. In: Higgins JPT, Green S, eds. Cochrane Handbook for Systematic Reviews of Interventions. Version 5.1.0. The Cochrane Collaboration; 2011. doi:10.1002/9781119536604
+5. Pieper D, Antoine SL, Mathes T, et al. Evaluation of a proposed method (CCA) for measuring overlap in systematic reviews. BMC Med Res Methodol. 2014;14:135. doi:10.1016/j.jclinepi.2013.11.007
 6. Arai M. Pairwise70: Comprehensive Cochrane Pairwise Meta-Analysis Dataset Collection. R package version 2.0.0. GitHub; 2026. Available from: https://github.com/mahmood789/Pairwise70.
-7. Higgins JPT, Thomas J, Chandler J, et al., eds. Cochrane Handbook for Systematic Reviews of Interventions. Version 6.4. Cochrane; 2023.
+7. Higgins JPT, Thomas J, Chandler J, et al., eds. Cochrane Handbook for Systematic Reviews of Interventions. Version 6.4. Cochrane; 2023. doi:10.1002/9781119536604
 8. Jaccard P. The distribution of the flora in the alpine zone. New Phytol. 1912;11(2):37-50.
-9. Veroniki AA, Jackson D, Viechtbauer W, et al. Methods to estimate the between-study variance and its uncertainty in meta-analysis. Res Synth Methods. 2016;7(1):55-79.
-10. Sterne JAC, Sutton AJ, Ioannidis JPA, et al. Recommendations for examining and interpreting funnel plot asymmetry in meta-analyses of randomised controlled trials. BMJ. 2011;343:d4002.
+9. Veroniki AA, Jackson D, Viechtbauer W, et al. Methods to estimate the between-study variance and its uncertainty in meta-analysis. Res Synth Methods. 2016;7(1):55-79. doi:10.1002/jrsm.1164
+10. Sterne JAC, Sutton AJ, Ioannidis JPA, et al. Recommendations for examining and interpreting funnel plot asymmetry in meta-analyses of randomised controlled trials. BMJ. 2011;343:d4002. doi:10.1136/bmj.d4002
 11. Cochrane Library Editorial Unit. Cochrane Library standards for managing overlapping systematic reviews. Cochrane Methods; 2020.
-12. Pollock M, Fernandes RM, Becker LA, et al. Chapter V: Overviews of Reviews. In: Higgins JPT, Thomas J, eds. Cochrane Handbook for Systematic Reviews of Interventions. Version 6.4. Cochrane; 2023.
+12. Pollock M, Fernandes RM, Becker LA, et al. Chapter V: Overviews of Reviews. In: Higgins JPT, Thomas J, eds. Cochrane Handbook for Systematic Reviews of Interventions. Version 6.4. Cochrane; 2023. doi:10.1002/9781119536604
