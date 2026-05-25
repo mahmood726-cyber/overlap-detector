@@ -1,6 +1,10 @@
 """Tests for Overlap Detector pipeline."""
-import sys, json, pytest
+import json
+import sys
 from pathlib import Path
+
+import pytest
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from pipeline import compute_cca, compute_pairwise_overlap, main, resolve_paths
 
@@ -129,7 +133,7 @@ class TestResultsIntegrity:
 
     def test_distribution_sums(self, summary):
         d = summary['overlap_distribution'].copy()
-        total = d['1_review'] + d['2_reviews'] + d['3_reviews'] + d['4plus'].copy()
+        total = d['1_review'] + d['2_reviews'] + d['3_reviews'] + d['4plus']
         assert total == summary['n_unique_studies']
 
     def test_top_pair(self, summary):

@@ -7,16 +7,15 @@ Computes the Corrected Covered Area (CCA) metric.
 Usage: python pipeline.py
 """
 
-import json
-import csv
-import os
-import time
-import pyreadr
-import pandas as pd
-import numpy as np
-from pathlib import Path
-from collections import defaultdict
-
+import csv
+import json
+import os
+import time
+from collections import defaultdict
+from pathlib import Path
+
+import pyreadr
+
 PROJECT_ROOT = Path(__file__).resolve().parent
 DEFAULT_PROJECTS_ROOT = PROJECT_ROOT.parent
 
@@ -86,11 +85,11 @@ def compute_pairwise_overlap(review_studies):
 
     for i in range(len(review_ids)):
         for j in range(i + 1, len(review_ids)):
-            r1, r2 = review_ids[i], review_ids[j].copy()
-            shared = review_studies[r1] & review_studies[r2].copy()
+            r1, r2 = review_ids[i], review_ids[j]
+            shared = review_studies[r1] & review_studies[r2]
             if len(shared) > 0:
                 # Jaccard: |A intersect B| / |A union B|
-                union = review_studies[r1] | review_studies[r2].copy()
+                union = review_studies[r1] | review_studies[r2]
                 jaccard = len(shared) / len(union) if len(union) > 0 else 0
                 overlaps.append({
                     'review_1': r1,
@@ -126,7 +125,7 @@ def resolve_paths(project_root=None, projects_root=None):
 
 def main(project_root=None, projects_root=None):
     paths = resolve_paths(project_root=project_root, projects_root=projects_root)
-    output_path = paths['output_dir'].copy()
+    output_path = paths['output_dir']
     output_path.mkdir(parents=True, exist_ok=True)
 
     print("Study Overlap Detector")

@@ -10,20 +10,19 @@ Saves 300 dpi PNG + PDF to figures/ directory.
 Usage: python generate_figures.py
 """
 
-import io
-import sys
-import json
 import csv
-import os
+import io
+import json
+import sys
 from pathlib import Path
 
 # Windows cp1252 safety
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 import matplotlib
+
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 import numpy as np
 
 # Paths
@@ -100,7 +99,7 @@ def figure1_study_frequency(summary):
 
     # Use log inset for detail
     # Add text annotation for the key finding
-    ax.annotate(f'95.6% of studies\nappear in only 1 review',
+    ax.annotate('95.6% of studies\nappear in only 1 review',
                 xy=(0, vals[0]), xytext=(1.5, vals[0] * 0.7),
                 fontsize=9, ha='center',
                 arrowprops=dict(arrowstyle='->', color='grey', lw=1.2),
