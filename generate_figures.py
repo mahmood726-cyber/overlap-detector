@@ -26,7 +26,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Paths
-BASE_DIR = Path(r'C:\OverlapDetector')
+BASE_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = BASE_DIR / 'data' / 'output'
 FIG_DIR = BASE_DIR / 'figures'
 FIG_DIR.mkdir(parents=True, exist_ok=True)

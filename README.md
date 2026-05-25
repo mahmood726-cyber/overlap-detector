@@ -8,7 +8,7 @@ How much primary study overlap exists across large collections of Cochrane syste
 
 ## Run
 
-Open `index.html` (or `index.html`) in any modern browser. No build step.
+Open `index.html` in any modern browser. No build step.
 
 For local development:
 
@@ -30,7 +30,7 @@ The suite under `tests/` includes 1 test file(s).
 | Path | Purpose |
 |---|---|
 | `index.html` | the dashboard (main artifact) |
-| `index.html` | landing page |
+| `generate_figures.py` | publication figure generator |
 | `tests/` | pytest tests |
 | `e156-submission/` | E156 micro-paper bundle |
 | `E156-PROTOCOL.md` | project metadata (E156 entry #127) |

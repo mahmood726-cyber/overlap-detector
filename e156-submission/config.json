@@ -3,7 +3,7 @@
   "slug": "overlap-detector",
   "author": "Mahmood Ahmad",
   "date": "2026-03-26",
-  "path": "C:\\OverlapDetector",
+  "path": "..",
   "type": "meta-research",
   "primary_estimand": "Corrected Covered Area (CCA)",
   "summary": "Study overlap across 501 Cochrane reviews is minimal (CCA = 0.0001), validating the Pairwise70 dataset for independent methodological benchmarking.",
