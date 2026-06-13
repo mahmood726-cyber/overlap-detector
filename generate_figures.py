@@ -16,8 +16,9 @@ import json
 import sys
 from pathlib import Path
 
-# Windows cp1252 safety
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+# Windows cp1252 safety (skip under pytest, which manages its own stdout capture)
+if "pytest" not in sys.modules:
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 import matplotlib
 
