@@ -49,7 +49,7 @@ def load_all_studies(pairwise_dir):
                 if pd.isna(raw_study):
                     continue
                 key = str(raw_study).strip().lower()
-                if key in ('', 'nan', 'none', '<na>'):
+                if key in ('', 'na', 'n/a', 'nan', 'none', 'null', '<na>'):
                     continue
                 n_valid += 1
                 study_reviews[key].add(review_id)
