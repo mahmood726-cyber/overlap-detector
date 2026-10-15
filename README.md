@@ -38,3 +38,16 @@ The suite under `tests/` includes 1 test file(s).
 ## License
 
 See `LICENSE` (MIT).
+
+
+## Data integrity and interpretation
+
+The loader now rejects archives without a usable `Study` column and stops with
+an explicit error if any `.rda` fails to load, rather than silently treating
+an incomplete subset as the complete Cochrane corpus. Empty and missing study
+identifiers are excluded from overlap keys; a missing value must not become a
+shared study named `nan`. Unit tests simulate these cases and CI now fails
+on pytest errors. Full-corpus reprocessing is **required** before treating
+archived study-overlap counts, CCA, or dashboard values as independently
+revalidated under these corrections. Author/year text matching still risks
+false positives and negatives; study-identity validation remains necessary.
