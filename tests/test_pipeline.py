@@ -202,7 +202,7 @@ def test_missing_identifiers_do_not_create_spurious_cross_review_overlap(
     )
 
     study_reviews, review_studies, _ = load_all_studies(tmp_path)
-    assert set(study_reviews) == {'alpha 2010', 'beta 2011', 'na'}
+    assert set(study_reviews) == {'alpha 2010', 'beta 2011'}
     assert len(review_studies) == 2
     assert compute_cca(review_studies) == 0.0
     assert compute_pairwise_overlap(review_studies) == []
