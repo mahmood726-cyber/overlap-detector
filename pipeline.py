@@ -11,6 +11,8 @@ import csv
 import json
 import os
 import time
+
+import pandas as pd
 from collections import defaultdict
 from pathlib import Path
 
@@ -27,28 +29,41 @@ def load_all_studies(pairwise_dir):
     review_names = {}
 
     pairwise_path = Path(pairwise_dir)
-    for rda in sorted(pairwise_path.glob('*.rda')):
+    rda_files = sorted(pairwise_path.glob('*.rda'))
+    if not rda_files:
+        raise ValueError(f"No .rda files found in {pairwise_path}")
+    for rda in rda_files:
         review_id = rda.stem.split('_')[0]
         try:
             result = pyreadr.read_r(str(rda))
             df = list(result.values())[0]
             df.columns = df.columns.str.replace(' ', '.', regex=False)
 
-            for _, row in df.iterrows():
-                study = str(row.get('Study', ''))
-                year = row.get('Study.year', '')
-                if not study:
+            if 'Study' not in df.columns:
+                raise ValueError("missing required Study column")
+
+            n_valid = 0
+            for raw_study in df['Study']:
+                # Previously, str(NaN) became the same phantom "nan" key
+                # in every review containing a missing identifier.
+                if pd.isna(raw_study):
                     continue
-                # Normalize study key: "Author Year" format
-                key = study.strip().lower()
+                key = str(raw_study).strip().lower()
+                if key in ('', 'na', 'n/a', 'nan', 'none', 'null', '<na>'):
+                    continue
+                n_valid += 1
                 study_reviews[key].add(review_id)
                 review_studies[review_id].add(key)
+            if not n_valid:
+                raise ValueError("no valid Study identifiers")
 
             # Store first analysis name
             if 'Analysis.name' in df.columns and len(df) > 0:
                 review_names[review_id] = str(df['Analysis.name'].iloc[0])
-        except Exception:
-            continue
+        except Exception as exc:
+            # Never silently omit a damaged review: CCA, prevalence and
+            # pairwise denominators otherwise appear valid but are biased.
+            raise RuntimeError(f"Unable to audit {rda.name}: {exc}") from exc
 
     return study_reviews, review_studies, review_names
 

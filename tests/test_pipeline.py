@@ -178,5 +178,70 @@ def test_main_uses_repo_relative_sibling_projects(tmp_path, monkeypatch):
     assert summary['n_pairs_with_overlap'] == 1
 
 
+def test_missing_identifiers_do_not_create_spurious_cross_review_overlap(
+    tmp_path, monkeypatch,
+):
+    """NaN and blank Study values must not generate phantom shared studies."""
+    import pandas as pd
+    from pipeline import load_all_studies
+
+    for filename in ('CD000001_pub1_data.rda', 'CD000002_pub1_data.rda'):
+        (tmp_path / filename).touch()
+
+    frames = {
+        'CD000001_pub1_data.rda': pd.DataFrame({
+            'Study': ['Alpha 2010', None, float('nan'), '   ', 'None']
+        }),
+        'CD000002_pub1_data.rda': pd.DataFrame({
+            'Study': [None, float('nan'), 'Beta 2011', 'NA']
+        }),
+    }
+    monkeypatch.setattr(
+        'pipeline.pyreadr.read_r',
+        lambda path: {'data': frames[Path(path).name]},
+    )
+
+    study_reviews, review_studies, _ = load_all_studies(tmp_path)
+    assert set(study_reviews) == {'alpha 2010', 'beta 2011'}
+    assert len(review_studies) == 2
+    assert compute_cca(review_studies) == 0.0
+    assert compute_pairwise_overlap(review_studies) == []
+
+
+def test_missing_study_column_fails_closed(tmp_path, monkeypatch):
+    """Broken schemas must not silently shrink the review denominator."""
+    import pandas as pd
+    from pipeline import load_all_studies
+
+    (tmp_path / 'CD000001_pub1_data.rda').touch()
+    monkeypatch.setattr(
+        'pipeline.pyreadr.read_r',
+        lambda _: {'data': pd.DataFrame({'Analysis.number': [1]})},
+    )
+    with pytest.raises(RuntimeError, match='missing required Study column'):
+        load_all_studies(tmp_path)
+
+
+def test_corrupted_rda_file_fails_with_filename(tmp_path, monkeypatch):
+    from pipeline import load_all_studies
+
+    filename = 'CD000001_pub1_data.rda'
+    (tmp_path / filename).touch()
+
+    def corrupted(_):
+        raise OSError('corrupt test fixture')
+
+    monkeypatch.setattr('pipeline.pyreadr.read_r', corrupted)
+    with pytest.raises(RuntimeError, match=filename):
+        load_all_studies(tmp_path)
+
+
+def test_no_input_files_fails_instead_of_reporting_zero_overlap(tmp_path):
+    from pipeline import load_all_studies
+
+    with pytest.raises(ValueError, match=r'No \.rda files'):
+        load_all_studies(tmp_path)
+
+
 if __name__ == '__main__':
     pytest.main([__file__, '-v'])
